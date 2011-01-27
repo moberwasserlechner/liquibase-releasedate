@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+  targetNamespace="http://www.liquibase.org/xml/ns/dbchangelog-ext"
+  xmlns="http://www.liquibase.org/xml/ns/dbchangelog-ext"
+  elementFormDefault="qualified">
+
+	<xsd:element name="releaseDate">
+		<xsd:complexType>
+      <xsd:attribute name="releasedOn" type="xsd:string" use="required" />
+      <xsd:attribute name="commentText" type="xsd:string" />
+      <xsd:attribute name="parsePattern" type="xsd:string" default="yyyy-MM-dd"/>
+      <xsd:attribute name="formatPattern" type="xsd:string" default="MMMMM dd, yyyy" />
+		</xsd:complexType>
+	</xsd:element>
+  
+</xsd:schema>
