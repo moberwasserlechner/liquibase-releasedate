@@ -17,8 +17,11 @@ import liquibase.statement.core.CommentStatement;
 
 /**
  * Liquibase extension to be able to give a {@link ChangeSet} a release date. 
- * <p>This could be used to give more information or to exclude/include only special ChangeSets in a upgrade,
- * if you use Liquibase wihin a installer module of your applicaton
+ * <p>
+ * This could be used to give more information or to exclude/include only special ChangeSets in a upgrade,
+ * if you use Liquibase wihin a installer module of your application.
+ * </p>
+ * 
  * @author m.oberwasserlechner@mum-software.com
  *
  */

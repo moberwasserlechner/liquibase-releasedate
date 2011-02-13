@@ -5,7 +5,6 @@
   <version>1.0.0</version>
   <name>liquibase-releasedate</name>
   <issueManagement>
-  	<system>Jira</system>
   	<url>http://liquibase.jira.com/browse/CONTRIB</url>
   </issueManagement>
   <scm>

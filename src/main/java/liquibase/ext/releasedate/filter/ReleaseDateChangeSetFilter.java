@@ -12,16 +12,25 @@ import org.slf4j.LoggerFactory;
 
 
 /**
+ * This filter processes a single {@link ReleaseDateChange} for a given {@link ChangeSet} and accepts the changeSet, 
+ * if its releaseDate is after a given {@link #installationDate}.
+ * 
+ * <p>Using the Boolean {@link #acceptIfNotExists} it is possible to exclude changeSets, which have no existing {@link ReleaseDateChange}.</p>
+ * 
  * @author m.oberwasserlechner@mum-software.com
  */
 public class ReleaseDateChangeSetFilter implements ChangeSetFilter {
 
   private final Logger logger = LoggerFactory.getLogger(getClass());
 
+  /**
+   * The installation date the release date is compared with.
+   */
   private Date installationDate;
   
   /**
-   * If true this adives the filter to not accept ChangeSets
+   * If true this flag advises the filter to accepts ChangeSets even if no {@link ReleaseDateChange} exists. Default = false. 
+   * If false the ChangeSets is not accepted.
    */
   private boolean acceptIfNotExists = false;
   
@@ -39,6 +48,7 @@ public class ReleaseDateChangeSetFilter implements ChangeSetFilter {
   }
 
   /**
+   * 
    * @see liquibase.changelog.filter.ChangeSetFilter#accepts(liquibase.changelog.ChangeSet)
    */
   @Override
