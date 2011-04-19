@@ -63,7 +63,7 @@ public class ReleaseDateChange extends AbstractChange {
   private String commentText = DEFAULT_RELEASED_ON_TEXT;
   
   public ReleaseDateChange() {
-    super("releaseDate", "Enables the user to transparently control the release of a ChangeSet.", ChangeMetaData.PRIORITY_DEFAULT);
+    super("releaseDate", "Release Info", ChangeMetaData.PRIORITY_DEFAULT);
   }
 
   /**
@@ -98,7 +98,7 @@ public class ReleaseDateChange extends AbstractChange {
     }
     return this.commentText.replaceAll("\\{\\}", sdf.format(this.releasedOn));
   }
-
+  
   
   /**
    * Gets the release date.

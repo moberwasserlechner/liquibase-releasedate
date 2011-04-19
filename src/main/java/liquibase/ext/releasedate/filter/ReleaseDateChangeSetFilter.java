@@ -51,7 +51,6 @@ public class ReleaseDateChangeSetFilter implements ChangeSetFilter {
    * 
    * @see liquibase.changelog.filter.ChangeSetFilter#accepts(liquibase.changelog.ChangeSet)
    */
-  @Override
   public boolean accepts(ChangeSet changeSet) {
     // ### Release Date ###
     ReleaseDateChange releaseDateChange = null;
